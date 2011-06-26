@@ -1,0 +1,15 @@
+This is an Eiffel wrapping og the 'cryptlib' package; see the website:
+
+http://www.cs.auckland.ac.nz/~pgut001/cryptlib/
+
+also:
+
+http://www.cryptlib.com
+
+It [cryptlib] encompasses encryption, secure hashing, secure/MIME, certificate management etc, etc
+
+
+This code was originally started using Small/Smart Eiffel, and only generation of the Eiffel class ECRYPT_CONSTANTS was completed,
+implemented in the single root class ECRYPT_MAKE_CONSTANTS.
+
+It is very much work-in-progress ... !!
