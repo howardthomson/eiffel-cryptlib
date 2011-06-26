@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<project name="ecryptlib" default="help">
+
+	<description>
+		description: "Eiffel Ant file for 'ecryptlib'"
+		system: "Eiffel wrapper for 'cryptlib'"
+		copyright: "Howard Thomson and others"
+		license: "MIT License"
+		date: "$Date: 2010/09/18 $"
+		revision: "$Revision: 0.01 $"
+	</description>
+
+	<inherit>
+		<parent location="${GOBO}/misc/eiffel.eant">
+			<redefine target="init_system"/>
+			<redefine target="compile_ge"/>
+		</parent>
+	</inherit>
+
+
+<!-- Implementation -->
+
+	<target name="init_system">
+		<set name="system" value="ecryptlib"/>
+		<set name="system_dir" value="/data/git/eiffel-cryptlib"/>
+	</target>
+
+	<target name="compile_ge" depend="prepare_compile">
+		<description>
+			Compile '${system}' with Gobo Eiffel.
+			Compile in debug mode if ${debug} is defined.
+		</description>
+
+		<set name="eiffel" value="ge"/>
+		<setenv name="bit_64" value="_64"/>
+		<geant target="xace">
+			<argument name="a_compiler" value="ge"/>
+			<argument name="a_output" value="compile_ge.xace"/>
+		</geant>
+		<delete file="${system}${exe}"/>
+		<set name="finalize" value="true"/>
+		<set name="finalize" value="false" if="${debug}"/>
+		<gec ace="compile_ge.xace" catcall="no" finalize="${finalize}" c_compile="true" cat="false"/>
+	</target>
+
+</project>

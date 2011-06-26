@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<system name="ecryptlib">
+	<description>
+		system: "Eiffel wrapping of 'cryptlib'"
+		copyright: "Copyright (c) 2010 Howard Thomson and others"
+		license: "MIT License"
+		date: "$Date: 2010/09/18 $"
+		revision: "$Revision: 0.01 $"
+	</description>
+
+	<!-- root class="EFB" creation="make_and_launch"/ -->
+	<option name="console_application" value="true"/>
+	<option unless="${DEBUG}">
+		<option name="assertion" value="none"/>
+		<option name="garbage_collector" value="none"/>
+		<option name="finalize" value="true" unless="${GOBO_EIFFEL}=ve"/>
+	</option>
+	<option if="${DEBUG}">
+		<option name="assertion" value="all"/>
+		<option name="garbage_collector" value="none"/>
+		<option name="finalize" value="false"/>
+	</option>
+	<!--option if="${GOBO_DOTNET}">
+		<option name="msil_generation" value="true"/>
+		<option name="line_generation" value="true"/>
+	</option-->
+
+	<mount location="${GOBO}/library/tools/library.xace"/>
+	<mount location="${GOBO}/library/argument/library.xace"/>
+	<mount location="${GOBO}/library/lexical/library.xace"/>
+	<mount location="${GOBO}/library/parse/library.xace"/>
+	<mount location="${GOBO}/library/utility/library.xace"/>
+	<mount location="${GOBO}/library/kernel/library.xace"/>
+	<mount location="${GOBO}/library/structure/library.xace"/>
+	<mount location="${GOBO}/library/pattern/library.xace"/>
+	<mount location="${GOBO}/library/xml/library.xace"/>
+	<mount location="${GOBO}/library/string/library.xace"/>
+	<mount location="${GOBO}/library/math/library.xace"/>
+	<mount location="${GOBO}/library/time/library.xace"/>
+	
+	
+	<cluster name="free_elks" location="${GOBO}/library/free_elks">
+		<option name="abstract" value="true"/>
+		<cluster name="fake">
+			<!--option name="exclude" value="any.e"/-->
+		</cluster>
+		<cluster name="kernel">
+			<!--option name="exclude" value="any.e"/-->
+		</cluster>
+		<cluster name="refactoring"/>
+		<cluster name="structures">
+			<cluster name="access"/>
+			<cluster name="cursor_tree"/>
+			<cluster name="cursors"/>
+			<cluster name="dispenser"/>
+			<cluster name="iteration"/>
+			<cluster name="list"/>
+			<cluster name="set">
+				<cluster name="strategies"/>
+			</cluster>
+			<cluster name="sort"/>
+			<cluster name="storage"/>
+			<cluster name="table"/>
+			<cluster name="traversing"/>
+			<cluster name="tree"/>
+		</cluster>
+		<cluster name="support"/>
+	</cluster>
+	
+	<option name="c_compiler_options" value="-m32" if="${m32}"/>
+	<option name="link" value="-m32" if="${m32}"/>
+	<option name="link" value="-lrt"/>
+	<option name="link" value="-lm"/>
+</system>

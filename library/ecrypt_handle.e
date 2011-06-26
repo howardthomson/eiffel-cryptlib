@@ -14,5 +14,5 @@ feature
 	handle: INTEGER
 
 	last_error: INTEGER
-			-- Return code from last
+			-- Return code from last called cryptlib C routine
 end

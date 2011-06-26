@@ -2,7 +2,7 @@ indexing
 
 	description: "Eiffel cryptlib device"
 
-class ECRYPTLIB_DEVICE
+class ECRYPT_DEVICE
 
 inherit
 

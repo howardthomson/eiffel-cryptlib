@@ -2,7 +2,7 @@ indexing
 
 	description: "Eiffel cryptlib context"
 
-class ECRYPTLIB_CONTEXT
+class ECRYPT_CONTEXT
 
 inherit
 
