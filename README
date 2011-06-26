@@ -13,3 +13,7 @@ This code was originally started using Small/Smart Eiffel, and only generation o
 implemented in the single root class ECRYPT_MAKE_CONSTANTS.
 
 It is very much work-in-progress ... !!
+
+See also: https://github.com/Eiffel-World/eel.git
+
+and: http://code.google.com/p/eiffel-encryption-library/
