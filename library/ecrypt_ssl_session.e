@@ -1,4 +1,4 @@
-indexing
+note
 
 	description: "Eiffel cryptlib SSL communication session"
 
@@ -8,7 +8,7 @@ inherit
 
 	ECRYPT_SESSION
 
-creation
+create
 
 	make
 
@@ -19,9 +19,9 @@ feature
 		local
 			c_ret: INTEGER
 		do
-			c_ret := c_create_session($session_handle, CRYPT_UNUSED, CRYPT_SESSION_SSL)
-			if crypt_no_error(c_ret) then
-				c_set_attribute(session_handle, CRYPT_ATTRIBUTE_BUFFERSIZE, 65536)
+			c_ret := c_create_session ($session_handle, CRYPT_UNUSED, CRYPT_SESSION_SSL)
+			if crypt_no_error (c_ret) then
+				c_set_attribute (session_handle, CRYPT_ATTRIBUTE_BUFFERSIZE, 65536)
 			else
 			--	...
 			end

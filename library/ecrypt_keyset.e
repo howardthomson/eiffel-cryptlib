@@ -2,7 +2,7 @@ indexing
 
 	description: "Eiffel cryptlib keyset"
 
-class ECRYPTLIB_KEYSET
+class ECRYPT_KEYSET
 
 inherit
 

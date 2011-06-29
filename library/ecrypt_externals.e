@@ -2,6 +2,10 @@ indexing
 
 	description: "External routines for Eiffel cryptlib"
 
+	TODO: "[
+		Add externals for socket/stream I/O interception
+	]"
+
 class ECRYPT_EXTERNALS
 
 inherit

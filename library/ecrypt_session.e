@@ -1,4 +1,4 @@
-indexing
+note
 
 	description: "Eiffel cryptlib communication session"
 
@@ -26,6 +26,6 @@ feature
 	close is
 			-- Terminate session
 		do
-			c_destroy_session(session_handle)
+			c_destroy_session (session_handle)
 		end
 end
