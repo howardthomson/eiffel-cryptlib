@@ -10,6 +10,7 @@
 	</description>
 
 	<!-- root class="EFB" creation="make_and_launch"/ -->
+	<root class="" creation=""/>
 	<option name="console_application" value="true"/>
 	<option unless="${DEBUG}">
 		<option name="assertion" value="none"/>

@@ -1,4 +1,4 @@
-This is an Eiffel wrapping og the 'cryptlib' package; see the website:
+This is an Eiffel wrapping of the 'cryptlib' package; see the website:
 
 http://www.cs.auckland.ac.nz/~pgut001/cryptlib/
 
@@ -17,3 +17,4 @@ It is very much work-in-progress ... !!
 See also: https://github.com/Eiffel-World/eel.git
 
 and: http://code.google.com/p/eiffel-encryption-library/
+
